@@ -1,0 +1,36 @@
+/* Gaya untuk seluruh halaman */
+body {
+    font-family: 'Courier New', sans-serif; /* Bisa diganti sesuai selera */
+    background-color: #e6e6fa; /* Warna ungu muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Gaya untuk 'kartu' utama */
+.profile-card {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center; /* membuat konten dalam kartu jadi center */
+}
+
+/* Gaya untuk gambar profil */
+img {
+    border-radius: 50%;
+    border: 5px solid #5f9ea0; /* bingkai tebal */
+    padding: 5px; /* jarak antara gambar dan bingkai */
+    background-color: white; /* supaya padding tidak transparan */
+    display: block;
+    margin: 0 auto; /* posisikan gambar ke tengah */
+    max-width: 150px; /* ukuran maksimal gambar, bisa disesuaikan */
+}
+
+/* Gaya untuk link */
+a {
+    text-decoration: none;
+    color: #1e90ff;
+}
