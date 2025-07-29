@@ -1,36 +1,122 @@
-/* Gaya untuk seluruh halaman */
+/* style.css */
+
+/* Pengaturan Global */
 body {
-    font-family: 'Courier New', sans-serif; /* Bisa diganti sesuai selera */
-    background-color: #e6e6fa; /* Warna ungu muda */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Warna latar belakang halaman */
+    color: #333;
 }
 
-/* Gaya untuk 'kartu' utama */
-.profile-card {
-    background-color: white;
-    width: 350px;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center; /* membuat konten dalam kartu jadi center */
+/* Header & Footer */
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0; /* Padding atas/bawah 16px, kiri/kanan 0 */
+    text-align: center;
 }
 
-/* Gaya untuk gambar profil */
-img {
-    border-radius: 50%;
-    border: 5px solid #5f9ea0; /* bingkai tebal */
-    padding: 5px; /* jarak antara gambar dan bingkai */
-    background-color: white; /* supaya padding tidak transparan */
-    display: block;
-    margin: 0 auto; /* posisikan gambar ke tengah */
-    max-width: 150px; /* ukuran maksimal gambar, bisa disesuaikan */
+header h1 {
+    margin: 0;
+    color: #ffd700; /* Warna kuning emas untuk judul utama */
 }
 
-/* Gaya untuk link */
-a {
+/* Navigasi */
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex; /* Menggunakan flexbox untuk navigasi */
+    justify-content: center; /* Pusatkan item navigasi */
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px; /* Jarak antar item navigasi */
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #1e90ff;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efek transisi saat hover */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Warna kuning emas saat di-hover */
+}
+
+/* Konten Utama */
+.container {
+    width: 80%; /* Lebar konten utama */
+    margin: auto; /* Pusatkan konten */
+    overflow: hidden; /* Mengatasi float di dalamnya */
+    padding: 20px 0;
+}
+
+.main-content {
+    float: left; /* Konten utama di sebelah kiri */
+    width: 70%;
+    padding-right: 20px;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+}
+
+.sidebar {
+    float: right; /* Sidebar di sebelah kanan */
+    width: 30%;
+    background: #e2e2e2;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 8px; /* Sudut membulat pada sidebar */
+}
+
+/* Membersihkan Float (untuk elemen setelah float) */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Bagian Anggota Tim */
+.team-members {
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: center; /* Pusatkan item secara horizontal */
+    gap: 20px; /* Jarak antar anggota tim */
+    flex-wrap: wrap; /* Izinkan item untuk melipat jika ruang tidak cukup */
+    margin-top: 30px;
+}
+
+.team-member {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1; /* Biarkan item mengambil ruang yang tersedia */
+    min-width: 250px; /* Lebar minimum untuk setiap anggota tim */
+    max-width: 30%; /* Lebar maksimum agar 3 per baris */
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Sedikit naik saat di-hover */
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #ffd700; /* Border kuning emas pada gambar profil */
+}
+
+/* Styling untuk elemen umum lainnya */
+h2, h3 {
+    color: #333;
+}
+
+p {
+    margin-bottom: 10px;
 }
